@@ -100,6 +100,10 @@ export function isTypeProperSuperTypeOf(schema: GraphQLSchema, maybeSuperType: G
   return isEqualType(maybeSuperType, subType) || subType instanceof GraphQLObjectType && (isAbstractType(maybeSuperType) && schema.isPossibleType(maybeSuperType, subType));
 }
 
+export function isMetaFieldName(name: string) {
+  return name.startsWith('__');
+}
+
 // Utility functions extracted from graphql-js
 
 /**

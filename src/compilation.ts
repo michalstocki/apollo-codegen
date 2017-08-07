@@ -98,7 +98,6 @@ export interface CompiledFragment {
   fields: Field[];
   fragmentSpreads: string[];
   inlineFragments: CompiledInlineFragment[];
-  fragmentsReferenced: string[];
 }
 
 export interface CompiledInlineFragment {
